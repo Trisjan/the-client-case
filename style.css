@@ -24,12 +24,13 @@ body {
 }
 
 main {
-    margin: 0;
-    padding: 0;
+    margin: 2em;
+    padding: 2em;
 }
 
 main img {
-    width: 400px;
+    width: 500px;
+    height: 312px;
 }
 
 .brand-title {
@@ -72,11 +73,20 @@ main img {
     border-radius: 10px;
 }
 
+.werkvormen {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em;
+    justify-content: center;
+    align-content: center;
+    justify-self: center;
+}
+
 footer {
     background: #625C51;
     font-size: 1em;
-    padding: 2em;
-    text-align: left;
+    padding: 1em;
+    text-align: center;
     position: absolute;
     right: 0;
     left: 0;
