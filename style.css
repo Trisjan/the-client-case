@@ -2,9 +2,16 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 6.74rem;
 }
 
 .navbar {
@@ -16,12 +23,16 @@ body {
     font-family: "Rigid Square";
 }
 
+main {
+    margin: 0;
+    padding: 0;
+}
+
 main img {
     width: 400px;
 }
 
 .brand-title {
-    font-size: 1.5rem;
     margin: 0.5rem;
     padding-left: 20px;
 }
@@ -57,20 +68,68 @@ main img {
 .toggle-button .bar {
     height: 3px;
     width: 100%;
-    background-color: rgb(145, 47, 47);
+    background-color: #090940;
     border-radius: 10px;
 }
 
-.footer {
-    position: fixed;
+footer {
+    background: #625C51;
+    font-size: 1em;
+    padding: 2em;
+    text-align: left;
+    position: absolute;
+    right: 0;
     left: 0;
     bottom: 0;
-    width: 100%;
-    background-color: #625C51;
-    color: white;
-    text-align: center;
-    font-family: "Rigid Square";
-    font-size: small;
+}
+
+/* CARDS WERKVORMEN */
+.roadmap {
+
+}
+
+.context-map {
+
+}
+
+.ground-matrix {
+
+}
+
+.grafisch-inloggen {
+
+}
+
+.sketchnote {
+
+}
+
+.een-scene {
+
+}
+
+.gevoel-in-beeld {
+
+}
+
+.praatplaat {
+
+}
+
+.retrospect {
+
+}
+
+.mindmap {
+
+}
+
+.visuele-connecties {
+
+}
+
+.cover-maken {
+
 }
 
 /* MOBILE SCREEN / 1 COLUMN SCREEN */
