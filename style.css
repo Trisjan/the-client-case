@@ -38,6 +38,10 @@ main img {
     padding-left: 20px;
 }
 
+.navbar-links {
+    justify-content: center;
+}
+
 .navbar-links ul {
     margin: 0;
     padding: 0;
@@ -91,55 +95,6 @@ footer {
     right: 0;
     left: 0;
     bottom: 0;
-}
-
-/* CARDS WERKVORMEN */
-.roadmap {
-
-}
-
-.context-map {
-
-}
-
-.ground-matrix {
-
-}
-
-.grafisch-inloggen {
-
-}
-
-.sketchnote {
-
-}
-
-.een-scene {
-
-}
-
-.gevoel-in-beeld {
-
-}
-
-.praatplaat {
-
-}
-
-.retrospect {
-
-}
-
-.mindmap {
-
-}
-
-.visuele-connecties {
-
-}
-
-.cover-maken {
-
 }
 
 /* MOBILE SCREEN / 1 COLUMN SCREEN */
