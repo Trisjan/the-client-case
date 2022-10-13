@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 html {
@@ -12,45 +13,29 @@ section {
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    margin: 1em 0em;
+    padding: 1em 0em;
     position: relative;
     min-height: 100%;
     padding-bottom: 6.74rem;
+    color: #343488;
 }
 
-.categories ul {
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2em;
-    justify-content: center;
-    align-content: center;
-    justify-self: center;
-    margin: 50px;
+/* navigatiebar */
+nav {
+    color: #343488;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(240, 240, 240);
-    color: #090940;
-    font-family: "Rigid Square";
-}
-
-main {
-    margin: 2em;
-    padding: 2em;
-}
-
-main img {
-    width: 500px;
-    height: 312px;
+    background: #ffffff;
 }
 
 .brand-title {
-    margin: 0.5rem;
-    padding-left: 20px;
+    margin: .5rem;
+    margin-left: 2em;
 }
 
 .navbar-links ul {
@@ -65,14 +50,19 @@ main img {
 
 .navbar-links li a {
     text-decoration: none;
-    color: #090940;
+    color: black;
     padding: 1rem;
     display: block;
 }
 
+.navbar-links li:hover {
+    background-color: #cecece;
+}
+
+/* toggle button in navbar */
 .toggle-button {
     position: absolute;
-    top: 0.35rem;
+    top: .75rem;
     right: 1rem;
     display: none;
     flex-direction: column;
@@ -88,6 +78,37 @@ main img {
     border-radius: 10px;
 }
 
+/* categorien */
+.categories ul {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em;
+    justify-content: center;
+    align-content: center;
+    justify-self: center;
+    margin: 50px;
+}
+
+.categories li {
+    list-style: none;
+    margin: 1em;
+}
+
+.categories li img {
+    height: 40px;
+    width: 40px;
+}
+
+main {
+    margin: 0 2em;
+    padding: 0 2em;
+}
+
+main img {
+    width: 500px;
+    height: 312px;
+}
+
 .werkvormen {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -95,6 +116,11 @@ main img {
     justify-content: center;
     align-content: center;
     justify-self: center;
+}
+
+.werkvormen div img:last-child {
+    height: 20px;
+    width: auto;
 }
 
 footer {
@@ -106,6 +132,41 @@ footer {
     right: 0;
     left: 0;
     bottom: 0;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* TABLET SCREEN / 2 COLUMN SCREEN */
+@media (max-width: 1600px) {
+    .werkvormen {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+        justify-content: center;
+        align-content: center;
+        justify-self: center;
+    }
+
+    .werkvormen div img {
+        width: 400px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 850px) {
+    .werkvormen {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+        justify-content: center;
+        align-content: center;
+        justify-self: center;
+    }
+
+    .werkvormen div img {
+        width: 300px;
+        height: 184px;
+    }
 }
 
 /* MOBILE SCREEN / 1 COLUMN SCREEN */
@@ -115,26 +176,25 @@ footer {
         font-size: 1em;
     }
 
+    /* navigatiebar */
     .toggle-button {
+        margin: 15px;
         display: flex;
     }
 
     .navbar-links {
         display: none;
-    }
-
-    .navbar .brand-title {
-        font-size: 1rem;
+        width: 100%;
     }
 
     .navbar {
         flex-direction: column;
         align-items: flex-start;
     }
-
+    
     .navbar-links ul {
-        width: 100%;
         flex-direction: column;
+        width: 100%;
     }
 
     .navbar-links li {
@@ -145,9 +205,24 @@ footer {
         padding: .5rem 1rem;
     }
 
-    .navbar-links:active {
+    .navbar-links.active {
         display: flex;
     }
+
+    .navbar-links li img {
+        display: none;
+    }
+
+    .prof::before {
+        content: "Profile";
+
+    }
+
+    .brand-title img {
+        height: 39px;
+        width: 40px;
+    }
+
 
     .werkvormen {
         display:grid;
@@ -164,12 +239,92 @@ footer {
     }
 
     .categories ul {
+        width: 100%;
+        grid: none;
+        margin: 1em;
+    }
+
+    footer {
+        font-size: 0.75em;
+    }
+}
+
+@media (max-width: 350px) {
+
+    * {
+        font-size: 1em;
+    }
+
+    /* navigatiebar */
+    .toggle-button {
+        margin: 5px;
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-links li img {
+        display: none;
+    }
+
+    .prof::before {
+        content: "Profile";
+
+    }
+
+    .brand-title img {
+        height: 39px;
+        width: 40px;
+    }
+
+
+    .werkvormen {
         display:grid;
         grid-template-columns: 1fr;
         grid-gap: 2em;
         justify-content: center;
         align-content: center;
         justify-self: center;
-        margin: 50px;
+    }
+
+    .werkvormen div img {
+        width: 250px;
+        height: 153px;
+    }
+
+    .categories ul {
+        flex-direction: column;
+        width: 100%;
+        grid: none;
+        margin: 1em;
+    }
+
+    footer {
+        font-size: 0.75em;
     }
 }
