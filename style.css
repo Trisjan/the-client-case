@@ -26,6 +26,10 @@ nav {
     color: #343488;
 }
 
+a:focus {
+    outline: 1px dashed red;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -109,6 +113,7 @@ main img {
     height: 312px;
 }
 
+/* werkvormen */
 .werkvormen {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -133,7 +138,6 @@ footer {
     left: 0;
     bottom: 0;
     color: white;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* TABLET SCREEN / 2 COLUMN SCREEN */
